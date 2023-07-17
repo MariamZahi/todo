@@ -1,6 +1,7 @@
 package com.example.todo
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -15,10 +16,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onAddButtonClick(view: View) {
+        val editTextTask = null
         val taskName = editTextTask.text.toString().trim()
         if (taskName.isNotEmpty()) {
             val newTask = Task(taskName)
+            val taskList = null
             taskList.add(newTask)
+            val taskAdapter = null
             taskAdapter.notifyDataSetChanged()
             editTextTask.text.clear()
         }
