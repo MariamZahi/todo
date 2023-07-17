@@ -4,15 +4,16 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 
+
 class MainActivity : AppCompatActivity() {
 
-    // ...
+  
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // ...
+       
     }
 
     fun onAddButtonClick(view: View) {
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             taskList.add(newTask)
             val taskAdapter = null
             taskAdapter.notifyDataSetChanged()
-            editTextTask.text.clear()
+            val clear: Any = editTextTask.text.clear()
         }
     }
 }
