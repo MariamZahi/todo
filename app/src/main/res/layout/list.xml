@@ -1,8 +1,0 @@
-<!-- list_item_task.xml -->
-<!-- list_item_task.xml -->
-<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/checkedTextViewTask"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="16dp"
-    android:textSize="18sp" />

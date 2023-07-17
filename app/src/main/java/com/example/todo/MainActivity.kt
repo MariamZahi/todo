@@ -5,6 +5,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 
 
+
 class MainActivity : AppCompatActivity() {
 
   
@@ -22,10 +23,13 @@ class MainActivity : AppCompatActivity() {
         if (taskName.isNotEmpty()) {
             val newTask = Task(taskName)
             val taskList = null
-            taskList.add(newTask)
+            taskList.addIfNotNull(newTask)
             val taskAdapter = null
             taskAdapter.notifyDataSetChanged()
-            val clear: Any = editTextTask.text.clear()
+            editTextTask.text.clear()
         }
     }
 }
+
+
+
