@@ -1,15 +1,14 @@
-package com.example.todo
 // TaskAdapter.kt
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.CheckedTextView
 import androidx.recyclerview.widget.RecyclerView
 
 class TaskAdapter(private val taskList: MutableList<Task>) : RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
 
     class TaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val textViewTask: TextView = itemView.findViewById(R.id.textViewTask)
+        val checkedTextViewTask: CheckedTextView = itemView.findViewById(R.id.checkedTextViewTask)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
@@ -19,7 +18,12 @@ class TaskAdapter(private val taskList: MutableList<Task>) : RecyclerView.Adapte
 
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
         val task = taskList[position]
-        holder.textViewTask.text = task.name
+        holder.checkedTextViewTask.text = task.name
+        holder.checkedTextViewTask.isChecked = task.isCompleted
+        holder.checkedTextViewTask.setOnClickListener {
+            task.isCompleted = !task.isCompleted
+            holder.checkedTextViewTask.isChecked = task.isCompleted
+        }
     }
 
     override fun getItemCount(): Int {
