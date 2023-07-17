@@ -20,13 +20,13 @@
         android:onClick="onAddButtonClick"
         android:text="Enter" />
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewTasks"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/buttonAdd"
         android:layout_marginTop="49dp" />
-
     <CheckedTextView
         android:id="@+id/checkedTextViewTask"
         android:layout_width="match_parent"
@@ -34,5 +34,6 @@
         android:padding="16dp"
         android:textSize="18sp"
         android:checkMark="?android:attr/listChoiceIndicatorMultiple" />
+
 
 </RelativeLayout>
